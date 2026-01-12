@@ -1,3 +1,6 @@
+# dataset
+src/data/UIT-ViIC/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

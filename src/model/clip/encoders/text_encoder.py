@@ -6,7 +6,7 @@ class TextEncoder(nn.Module):
     def __init__(self, from_pretrained, proj_dim):
         super(TextEncoder, self).__init__()
         if from_pretrained:
-            self.model = DistilBertModel.from_pretrained("distilbert-base-uncased")
+            self.model = DistilBertModel.from_pretrained("distilbert-base-multilingual-cased")
         else:
             config = DistilBertConfig()
             self.model = DistilBertModel(config)

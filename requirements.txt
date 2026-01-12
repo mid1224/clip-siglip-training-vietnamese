@@ -3,3 +3,4 @@ torchvision
 pycocotools
 transformers
 tqdm
+hydra-core

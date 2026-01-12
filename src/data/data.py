@@ -39,7 +39,7 @@ class CaptionTransform:
 
 class COCOCaptionsData:
     def __init__(self, config):
-        self.tokenizer = DistilBertTokenizer.from_pretrained("distilbert-base-uncased")
+        self.tokenizer = DistilBertTokenizer.from_pretrained("distilbert-base-multilingual-cased")
         self.config = config.data
         
         self.dataset = datasets.CocoCaptions(

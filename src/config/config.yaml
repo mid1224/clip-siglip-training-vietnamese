@@ -2,18 +2,18 @@ system:
     device: cuda
 
 data:
-    images_path: /coco/train2017/
-    annotations_path: /coco/annotations/captions_train2017.json
+    images_path: src/data/UIT-ViIC/dataset/train/images
+    annotations_path: src/data/UIT-ViIC/dataset/train/train.json
     context_length: 77
-    shuffle_captions: False
-    batch_size: 256
+    shuffle_captions: True
+    batch_size: 64
 
 model:
     from_pretrained: True
     proj_dim: 256
 
 algorithm:
-    loss: clip # clip/siglip
+    loss: siglip # clip/siglip
     epochs: 5
     learning_rate: 1e-4
     weight_decay: 0.0
