@@ -1,12 +1,12 @@
 system:
-    device: cuda
+    device: cuda # cuda/cpu/mps
 
 data:
     images_path: src/data/UIT-ViIC/dataset/train/images
     annotations_path: src/data/UIT-ViIC/dataset/train/train.json
     context_length: 77
-    shuffle_captions: True
-    batch_size: 64
+    shuffle_captions: True # Choose a random caption for each image for each epoch (if has multiple captions per image)
+    batch_size: 64 # adjust based on GPU memory
 
 model:
     from_pretrained: True

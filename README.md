@@ -2,6 +2,8 @@
 
 This repository is adapted from [ramanakshay/clip](https://github.com/ramanakshay/clip) to allow training on **Vietnamese Image-Captioning datasets**.
 
+Can be run on a PC or laptop (an NVIDIA GPU with CUDA is recommended).
+
 ## Guide
 
 1.  **Environment Setup**:
@@ -38,6 +40,9 @@ This repository is adapted from [ramanakshay/clip](https://github.com/ramanaksha
     If you want to use another dataset, you have to write your own script to convert them into COCO format.
 
 3.  **Train**:
+
+    Adjust config.yaml to match your use case and computer specs.
+
     ```bash
     python src/main.py
     ```
