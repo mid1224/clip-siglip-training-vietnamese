@@ -53,7 +53,15 @@ class Trainer:
                 pbar.set_postfix(loss=loss.item())
         self.scheduler.step()
 
+    # Save the model checkpoint
+    def save_model(self):
+        save_path = "checkpoints/siglip_vietnamese_model.pt"
+        torch.save(self.model.clip.state_dict(), save_path)
+        print(f"Saved model to {save_path}")
+
     def run(self):
         for epoch in range(self.config.epochs):
             print(f"Epoch {epoch+1}\n-------------------------------")
             self.run_epoch()
+
+        self.save_model()
