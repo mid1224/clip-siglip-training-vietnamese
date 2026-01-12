@@ -1,4 +1,56 @@
-# CLIP: Contrastive Language-Image Pretraining
+# CLIP & SigLIP Training (Vietnamese)
+
+This repository is adapted from [the CLIP/SigLIP implementation by ](https://github.com/ramanakshay/clip) to allow training on **Vietnamese Image-Captioning datasets**.
+
+## Guide
+
+1.  **Environment Setup**:
+    Install Anaconda or Miniconda first.
+
+    cd to the cloned repo.
+
+    Activate conda environment (base) if it isn't on automatically.
+
+    Then create an env for this repo and install required libs (-n name can be change to your liking):
+    ```bash
+    conda create -n clip-siglip-training-vietnamese-env python=3.11
+    conda activate clip-siglip-training-vietnamese-env
+    pip install -r requirements.txt
+    ```
+
+2.  **Data**:
+    This repo uses UIT-ViIC dataset.
+
+    Download it from this link: https://huggingface.co/datasets/ThucPD/UIT-ViIC
+
+    Copy the "dataset" folder to `src/data/UIT-ViIC/` (Create new UIT-ViIC folder)
+    
+    Or update `config.yaml` to point to your data source if you want to place it elsewhere
+
+    The original repo use COCO dataset. To make the new dataset work, run
+    ```bash
+    python src/data/convert_to_coco.py
+    ```
+    Make sure the file path in this script match the one in `config.yaml`. This will convert UIT-ViIC dataset to compatible COCO format.
+
+    If you want to use another dataset, you have to write your own script to convert them into COCO format.
+
+3.  **Train**:
+    ```bash
+    python src/main.py
+    ```
+    Models will be saved to `checkpoints/`.
+
+    **Test**
+    ```bash
+    python src/test.py
+    ```
+    Edit test.py "image_path" & "captions" to use other images and captions.
+
+---
+<br>
+
+# Original README: CLIP (Contrastive Language-Image Pretraining)
 
 Contrastive Language-Image Pre-training (CLIP) is a technique for training a pair of neural network models, one for image understanding and one for text understanding, using a contrastive objective. This project contains code to train CLIP on the MS-COCO Captions dataset. It also includes an implementation of SigLIP, which uses a sigmoid loss as the training objective.
 
