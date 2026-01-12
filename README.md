@@ -1,6 +1,6 @@
 # CLIP & SigLIP Training (Vietnamese)
 
-This repository is adapted from [the CLIP/SigLIP implementation by ](https://github.com/ramanakshay/clip) to allow training on **Vietnamese Image-Captioning datasets**.
+This repository is adapted from [ramanakshay/clip](https://github.com/ramanakshay/clip) to allow training on **Vietnamese Image-Captioning datasets**.
 
 ## Guide
 
