@@ -5,6 +5,7 @@ This repository is adapted from [ramanakshay/clip](https://github.com/ramanaksha
 ## Guide
 
 1.  **Environment Setup**:
+
     Install Anaconda or Miniconda first.
 
     cd to the cloned repo.
@@ -19,6 +20,7 @@ This repository is adapted from [ramanakshay/clip](https://github.com/ramanaksha
     ```
 
 2.  **Data**:
+
     This repo uses UIT-ViIC dataset.
 
     Download it from this link: https://huggingface.co/datasets/ThucPD/UIT-ViIC
