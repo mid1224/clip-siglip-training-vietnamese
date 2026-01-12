@@ -48,7 +48,7 @@ Can be run on a PC or laptop (an NVIDIA GPU with CUDA is recommended).
     ```
     Models will be saved to `checkpoints/`.
 
-    **Test**
+4.  **Test**
     ```bash
     python src/test.py
     ```
