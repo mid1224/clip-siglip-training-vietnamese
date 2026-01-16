@@ -28,7 +28,9 @@ def main(cfg):
     
     with torch.no_grad():
         logits = model.generate_similarity_matrix(img, inputs["input_ids"].to(device), inputs["attention_mask"].to(device))
-        probs = logits.softmax(dim=1).cpu().numpy()[0]
+        # probs = logits.sigmoid().cpu().numpy()[0] # Use Sigmoid loss
+        probs = logits.softmax(dim=1).cpu().numpy()[0] # Use Softmax loss
+
 
     # Print Result
     print("\nResult:")
